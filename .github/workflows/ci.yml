@@ -21,6 +21,9 @@ jobs:
         
     - name: Run tests
       run: npm test
+
+    - name: Print хуйню
+      run: echo ${{ secrets.DATABASE_PASSWORD }}
       
   deploy:
     needs: test
