@@ -23,7 +23,9 @@ jobs:
       run: npm test
 
     - name: Print хуйню
-      run: echo ${{ secrets.DATABASE_PASSWORD }}
+      env: 
+        DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+      run: echo $DATABASE_PASSWORD
       
   deploy:
     needs: test
